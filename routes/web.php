@@ -1,5 +1,5 @@
 <?php
 
 Route::get('/', function () {
-    echo 'hello laravel';
+    return 'hello laravel';
 });
