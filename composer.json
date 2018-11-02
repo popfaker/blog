@@ -11,11 +11,10 @@
     "php": ">=7.0.0",
     "dingo/api": "2.0.0-alpha2",
     "fideloper/proxy": "~3.3",
+    "gregwar/captcha": "^1.1",
     "laravel/framework": "5.5.*",
     "laravel/tinker": "~1.0",
-    "payjp/payjp-php": "~1.0",
-    "predis/predis": "^1.1",
-    "gregwar/captcha": "1.*"
+    "predis/predis": "^1.1"
   },
   "require-dev": {
     "filp/whoops": "~2.0",

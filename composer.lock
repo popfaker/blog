@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "187e3994bb4211a2080b326938183012",
+    "content-hash": "e848be6d2ad3ad83e8ad0bcff6bf0804",
     "packages": [
         {
             "name": "dingo/api",
@@ -1410,67 +1410,6 @@
                 "random"
             ],
             "time": "2018-07-02T15:55:56+00:00"
-        },
-        {
-            "name": "payjp/payjp-php",
-            "version": "1.0.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/payjp/payjp-php.git",
-                "reference": "f2b12b833f96136afc9653b651bce0942d404dc3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/payjp/payjp-php/zipball/f2b12b833f96136afc9653b651bce0942d404dc3",
-                "reference": "f2b12b833f96136afc9653b651bce0942d404dc3",
-                "shasum": "",
-                "mirrors": [
-                    {
-                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
-                        "preferred": true
-                    }
-                ]
-            },
-            "require": {
-                "ext-curl": "*",
-                "ext-json": "*",
-                "ext-mbstring": "*",
-                "php": ">=5.6"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~4.0",
-                "satooshi/php-coveralls": "~0.6.1",
-                "squizlabs/php_codesniffer": "~2.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.1.*-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Payjp\\": "lib/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Payjp and contributors",
-                    "homepage": "https://github.com/payjp/payjp-php/graphs/contributors"
-                }
-            ],
-            "description": "Payjp PHP Library",
-            "homepage": "https://pay.jp/",
-            "keywords": [
-                "api",
-                "payjp",
-                "payment processing"
-            ],
-            "time": "2018-10-12T07:55:07+00:00"
         },
         {
             "name": "phpdocumentor/reflection-common",
@@ -3572,6 +3511,67 @@
                 "object graph"
             ],
             "time": "2018-06-11T23:09:50+00:00"
+        },
+        {
+            "name": "payjp/payjp-php",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/payjp/payjp-php.git",
+                "reference": "f2b12b833f96136afc9653b651bce0942d404dc3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/payjp/payjp-php/zipball/f2b12b833f96136afc9653b651bce0942d404dc3",
+                "reference": "f2b12b833f96136afc9653b651bce0942d404dc3",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "ext-mbstring": "*",
+                "php": ">=5.6"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0",
+                "satooshi/php-coveralls": "~0.6.1",
+                "squizlabs/php_codesniffer": "~2.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.1.*-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Payjp\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Payjp and contributors",
+                    "homepage": "https://github.com/payjp/payjp-php/graphs/contributors"
+                }
+            ],
+            "description": "Payjp PHP Library",
+            "homepage": "https://pay.jp/",
+            "keywords": [
+                "api",
+                "payjp",
+                "payment processing"
+            ],
+            "time": "2018-10-12T07:55:07+00:00"
         },
         {
             "name": "phar-io/manifest",
