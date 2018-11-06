@@ -28,7 +28,7 @@ $api = app('Dingo\Api\Routing\Router');
 $api->version('v1', [
     'namespace' => 'App\Http\Controllers\Api'
 ], function ($api) {
-    $api->group(['middleware' => 'api.throttle', 'limit' => 60, 'expires' => 1], function ($api) {
+    $api->group([], function ($api) {
 
         //查看接口版本
         $api->get('version', function () {
@@ -37,7 +37,7 @@ $api->version('v1', [
         //用户列表
         $api->resource('users', 'UserController');
         //注册
-        $api->resource('register', 'RegisterController', ['only' => ['store']]);
+        $api->post('register', ['uses' => 'RegisterController@store', 'middleware' => 'api.throttle', 'limit' => 10, 'expires' => 1]);
         //图片验证码
         $api->post('captcha', 'CaptchaController@store');
         //发送短信验证码

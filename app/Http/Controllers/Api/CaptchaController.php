@@ -32,6 +32,6 @@ class CaptchaController extends Controller
             'captcha_key' => $key,
             'captcha_image' => $captcha->inline(),
             'expired_at' => $expiredAt->toDateTimeString()
-        ]);
+        ])->setStatusCode(201);
     }
 }
