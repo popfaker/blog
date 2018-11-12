@@ -42,6 +42,9 @@ $api->version('v1', [
         $api->post('captcha', 'CaptchaController@store');
         //发送短信验证码
         $api->post('verificationCodes', 'VerificationCodeController@store');
+
+        //登陆
+        $api->post('login', 'LoginController@store');
     });
 });
 

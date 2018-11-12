@@ -16,16 +16,20 @@ use Illuminate\Support\Facades\Cache;
  */
 class RegisterController extends Controller
 {
+    /**
+     * @param RegisterRequest $request
+     * @return \Dingo\Api\Http\Response|void
+     */
     public function store(RegisterRequest $request)
     {
         $verificationCode_key = $request->verificationCode_key;
         $verificationCode = Cache::get($verificationCode_key);
         if (!$verificationCode) {
-            return $this->response()->error('短信验证码已过期', 422);
+            return $this->response->error('短信验证码已过期', 422);
         }
 
         if (!hash_equals($verificationCode['code'], $request->code)) {
-            return $this->response()->error('短信验证码错误', 422);
+            return $this->response->error('短信验证码错误', 422);
         }
 
         //清除短信验证码
@@ -36,6 +40,6 @@ class RegisterController extends Controller
             'phone' => $verificationCode['phone'],
             'password' => encrypt($request->password)
         ]);
-        return $this->response()->created();
+        return $this->response->created();
     }
 }
