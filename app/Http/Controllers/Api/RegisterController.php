@@ -22,7 +22,9 @@ class RegisterController extends Controller
      */
     public function store(RegisterRequest $request)
     {
+
         $verificationCode_key = $request->verificationCode_key;
+
         $verificationCode = Cache::get($verificationCode_key);
         if (!$verificationCode) {
             return $this->response->error('短信验证码已过期', 422);
@@ -38,7 +40,7 @@ class RegisterController extends Controller
         User::query()->create([
             'name' => $request->name,
             'phone' => $verificationCode['phone'],
-            'password' => encrypt($request->password)
+            'password' => bcrypt($request->password)
         ]);
         return $this->response->created();
     }
