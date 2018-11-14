@@ -34,8 +34,7 @@ $api->version('v1', [
         $api->get('version', function () {
             return 'this is v1';
         });
-        //用户列表
-        $api->resource('users', 'UserController');
+
         //注册
         $api->post('register', ['uses' => 'RegisterController@store', 'middleware' => 'api.throttle', 'limit' => 10, 'expires' => 1]);
         //图片验证码
@@ -44,7 +43,13 @@ $api->version('v1', [
         $api->post('verificationCodes', 'VerificationCodeController@store');
 
         //登陆
-        $api->post('login', 'LoginController@store');
+        $api->post('login', 'AuthController@login');
+
+        $api->group(['middleware' => 'auth:api'], function ($api) {
+            //用户列表
+            $api->resource('users', 'UserController');
+        });
+
     });
 });
 

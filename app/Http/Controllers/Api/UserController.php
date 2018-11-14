@@ -23,13 +23,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        //return $this->response->noContent();
-        //return $this->response->created();
-
-        //$users = User::query()->get();
-        //return new ResourceCollection($users);
-
-        //return $this->response->errorMethodNotAllowed();
+        return $this->user();
     }
 
     /**
@@ -59,9 +53,9 @@ class UserController extends Controller
      * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
-        //
+        dd();
     }
 
     /**
